@@ -29,8 +29,8 @@ for (int i=0;i<n;i++)
 {
    for(int j=0;j<n;j++)
    {
-   int b=5;
-   b++;
+        int b=5;
+        b++;
    }
 }
 ```
@@ -42,3 +42,44 @@ Therefore the time complexity of the first fragment would be O(n), as the loop w
 Whereas the time complexity of the second fragment would be O(n2).
 
 Time complexity of the program = O(n) + O(n2) = O(n2)
+
+## Time Complexity Examples
+
+Let us discuss some important examples of time complexity.
+
+#### Example 1: The following is the program for finding the highest power less than 2. Find its Time complexity.
+
+```java
+class DivideByTwo
+{
+    public static void f(int n)
+    {
+        while(n != 0)
+        {
+            n/=2;
+        }
+    }
+} 
+```
+**Time Complexity:** The time complexity of the above program is O(log2n) . This is because at every step we divide n by 2 .
+
+#### Example 2: The following is the program for finding all the subsets of a given set. Find its Time complexity.
+
+```java
+printSubsets(char set[])
+{
+    int n = set.length;
+    for (int i = 0; i < (1<<n); i++)
+    {
+        System.out.print("{ ");
+        for (int j = 0; j < n; j++)
+            if ((i & (1 << j)) > 0)
+                System.out.print(set[j] + " ");
+
+        System.out.println("}");
+    }
+}
+```
+
+
+
