@@ -1,3 +1,4 @@
+![Learn Programming](./Assets/Learn%20PROGRAMING.png)
 # Learn programming
 
 > **Prerequisites**: Data structures and basic searching and sorting techniques. Some working knowledge of Mathematics (Functions and probability).  

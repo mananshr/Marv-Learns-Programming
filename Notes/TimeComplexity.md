@@ -65,3 +65,5 @@ We can only measure the best and the worst running time of the above algorithm.
 
 In the best case, the running time of the above algorithm would be constant ( the first element of the array itself is 1), whereas in the worst case the running time of the above algorithm would be linear ( there is no 1 in the array ).
 
+Now To define complexity, We use Asymptotic notations which we cover next.  
+
