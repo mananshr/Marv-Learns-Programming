@@ -28,5 +28,18 @@ Another point to note here is that running time and time complexity are two diff
 
 ### Types of Time Complexity
 
+| **Complexity** | **Name**                    | **Example**                                                    | 
+|----------------|-----------------------------|----------------------------------------------------------------|
+| **O(1)**       | Constant Time Complexity    |  Sum of two numbers.                                           |
+| **O(logn)**    | Logarithmic Time Complexity |  Finding an element in a sorted array by using binary search.  |
+| **O(n)**       | Linear Time Complexity      |  Finding the sum of an array of size n.                        |
+| **O(n logn)**  | Log-Linear Time Complexity  |  Sorting the array using merge sort.                           |
+| **O(n2)**      | Quadratic Time Complexity   |  Finding the sum of every pair of elements in an array.        |
+| **O(2n)**      | Exponential Time Complexity |  Finding all the subsets.                                      |
+| **O(n!)**      | Factorial Time Complexity   |  Finding all the permutations of a given array.                |
+
+## Some Examples
+![Time Complexity cheat sheet](../Assets/Time_Complexity_Cheat_Sheet.png)
+
 [//]: # (Links and references)
 [1]: TimeComplexity.md

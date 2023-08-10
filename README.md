@@ -1,6 +1,6 @@
 # Learn programming
 
-> **Prerequisites**: Some working knowledge of Mathematics (Functions and probability).
+> **Prerequisites**: Data structures and basic searching and sorting techniques. Some working knowledge of Mathematics (Functions and probability).  
 
 ## Content
 1. [Time Complexity](./Notes/TimeComplexity.md)
