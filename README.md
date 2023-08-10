@@ -8,4 +8,4 @@
 2. [Asymptotic Notations](./Notes/AsymptoticNotations.md)
 
 ## Code
-[Selection Sort](./Notes/SelectionSort.md)
+[Selection Sort](Notes/Code/SelectionSort.md)
