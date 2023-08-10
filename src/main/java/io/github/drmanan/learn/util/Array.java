@@ -24,7 +24,12 @@ public class Array {
         print_array(arr);
     }
 
-    public static int [] generate_random_array(int n, int max){
+    public static void print_array(int step, int[] arr) {
+        System.out.print("\nStep " + (step + 1) + ":\tArray: \t");
+        print_array(arr);
+    }
+
+    public static int[] generate_random_array(int n, int max) {
         return IntStream.generate(() -> new Random().nextInt(max)).limit(n).toArray();
     }
 

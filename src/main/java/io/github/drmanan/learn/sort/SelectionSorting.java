@@ -14,7 +14,7 @@ import static io.github.drmanan.learn.util.Array.print_array;
 public class SelectionSorting {
     static void SelectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-            int index = i; 
+            int index = i;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[index]) index = j; //select the index of smallest in unsorted array
             }
@@ -23,6 +23,7 @@ public class SelectionSorting {
                 arr[index] = arr[i];
                 arr[i] = temp;
             }
+            print_array(i, arr);
         }
     }
 
