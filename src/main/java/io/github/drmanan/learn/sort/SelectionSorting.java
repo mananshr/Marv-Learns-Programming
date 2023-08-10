@@ -8,8 +8,8 @@
 
 package io.github.drmanan.learn.sort;
 
-import static io.github.drmanan.learn.util.Array.generate_random_array;
-import static io.github.drmanan.learn.util.Array.print_array;
+import static io.github.drmanan.learn.commons.Array.generate_random_array;
+import static io.github.drmanan.learn.commons.Array.print_array;
 
 public class SelectionSorting {
     static void SelectionSort(int[] arr) {

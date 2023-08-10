@@ -8,7 +8,7 @@
 
 package io.github.drmanan.learn.sort;
 
-import io.github.drmanan.learn.util.Array;
+import io.github.drmanan.learn.commons.Array;
 
 public class HeapSort {
 

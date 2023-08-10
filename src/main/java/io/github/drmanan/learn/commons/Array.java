@@ -6,7 +6,7 @@
  * @since Thursday, 10 of August, 2023; 06:24:39
  */
 
-package io.github.drmanan.learn.util;
+package io.github.drmanan.learn.commons;
 
 import java.util.Random;
 import java.util.stream.IntStream;
