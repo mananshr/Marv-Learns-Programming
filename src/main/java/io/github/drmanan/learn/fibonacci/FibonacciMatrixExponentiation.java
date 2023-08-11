@@ -8,75 +8,93 @@
 
 package io.github.drmanan.learn.fibonacci;
 
+import java.math.BigInteger;
+import java.util.Arrays;
+
 public class FibonacciMatrixExponentiation {
 
-    // A utility function to multiply two
-    // matrices a[][] and b[][].
-    // Multiplication result is
-    // stored back in b[][]
-    static void multiply(int[][] a, int[][] b) {
-        // Creating an auxiliary matrix to
-        // store elements of the
-        // multiplication matrix
-        int[][] mul = new int[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                mul[i][j] = 0;
-                for (int k = 0; k < 3; k++)
-                    mul[i][j] += a[i][k] * b[k][j];
-            }
-        }
-
-        // storing the multiplication
-        // result in a[][]
-        // Updating our matrix
-        for (int i = 0; i < 3; i++)
-            System.arraycopy(mul[i], 0, a[i], 0, 3);
-    }
-
-    // Function to compute F raise to
-    // power n-2.
-    static int power(int[][] F, int n) {
-        int[][] M = {{1, 1, 1}, {1, 0, 0}, {0, 1, 0}};
-
-        // Multiply it with initial values
-        // i.e with F(0) = 0, F(1) = 1,
-        // F(2) = 1
-        if (n == 1) return F[0][0] + F[0][1];
-
-        power(F, n / 2);
-
-        multiply(F, F);
-
-        if (n % 2 != 0) multiply(F, M);
-
-        // Multiply it with initial values
-        // i.e with F(0) = 0, F(1) = 1,
-        // F(2) = 1
-        return F[0][0] + F[0][1];
-    }
-
-    // Return n'th term of a series defined
-    // using below recurrence relation.
-    // f(n) is defined as
-    // f(n) = f(n-1) + f(n-2) + f(n-3), n>=3
-    // Base Cases :
-    // f(0) = 0, f(1) = 1, f(2) = 1
-    static int findNthTerm(int n) {
-        int[][] F = {{1, 1, 1}, {1, 0, 0}, {0, 1, 0}};
-
-        return power(F, n - 2);
-    }
-
-    // Driver code
     public static void main(String[] args) {
 
-        int n = 15;
+        // int n = 10;
+        // System.out.println(displayFib(fib(BigInteger.valueOf(n))));
 
-        System.out.println("0\n1\n1");
+        print10NFib();
+    }
 
-        for (int i = 3; i < n; i++) {
-            System.out.println(findNthTerm(i));
+    public static void print10NFib(){
+        BigInteger mod = BigInteger.TEN.pow(20);
+        for (int exp : Arrays.asList(32, 64)) {
+            System.out.printf("Last 20 digits of fib(2^%d) = %s%n", exp, fibMod(BigInteger.valueOf(2).pow(exp), mod));
+        }
+
+        for (int i = 1; i <= 7; i++) {
+            BigInteger n = BigInteger.TEN.pow(i);
+            System.out.printf("fib(%,d) = %s%n", n, displayFib(fib(n)));
         }
     }
+
+    private static String displayFib(BigInteger fib) {
+        String s = fib.toString();
+        if (s.length() <= 40) {
+            return s;
+        }
+        return s.substring(0, 20) + " ... " + s.subSequence(s.length() - 20, s.length());
+    }
+
+    //  Use Matrix multiplication to compute Fibonacci numbers.
+    private static BigInteger fib(BigInteger k) {
+        BigInteger aRes = BigInteger.ZERO;
+        BigInteger bRes = BigInteger.ONE;
+        BigInteger cRes = BigInteger.ONE;
+        BigInteger aBase = BigInteger.ZERO;
+        BigInteger bBase = BigInteger.ONE;
+        BigInteger cBase = BigInteger.ONE;
+        while (k.compareTo(BigInteger.ZERO) > 0) {
+            if (k.mod(BigInteger.valueOf(2)).compareTo(BigInteger.ONE) == 0) {
+                BigInteger temp1 = aRes.multiply(aBase).add(bRes.multiply(bBase));
+                BigInteger temp2 = aBase.multiply(bRes).add(bBase.multiply(cRes));
+                BigInteger temp3 = bBase.multiply(bRes).add(cBase.multiply(cRes));
+                aRes = temp1;
+                bRes = temp2;
+                cRes = temp3;
+            }
+            k = k.shiftRight(1);
+            BigInteger temp1 = aBase.multiply(aBase).add(bBase.multiply(bBase));
+            BigInteger temp2 = aBase.multiply(bBase).add(bBase.multiply(cBase));
+            BigInteger temp3 = bBase.multiply(bBase).add(cBase.multiply(cBase));
+            aBase = temp1;
+            bBase = temp2;
+            cBase = temp3;
+        }
+        return aRes;
+    }
+
+    //  Use Matrix multiplication to compute Fibonacci numbers.
+    private static BigInteger fibMod(BigInteger k, BigInteger mod) {
+        BigInteger aRes = BigInteger.ZERO;
+        BigInteger bRes = BigInteger.ONE;
+        BigInteger cRes = BigInteger.ONE;
+        BigInteger aBase = BigInteger.ZERO;
+        BigInteger bBase = BigInteger.ONE;
+        BigInteger cBase = BigInteger.ONE;
+        while (k.compareTo(BigInteger.ZERO) > 0) {
+            if (k.mod(BigInteger.valueOf(2)).compareTo(BigInteger.ONE) == 0) {
+                BigInteger temp1 = aRes.multiply(aBase).add(bRes.multiply(bBase)).mod(mod);
+                BigInteger temp2 = aBase.multiply(bRes).add(bBase.multiply(cRes)).mod(mod);
+                BigInteger temp3 = bBase.multiply(bRes).add(cBase.multiply(cRes)).mod(mod);
+                aRes = temp1;
+                bRes = temp2;
+                cRes = temp3;
+            }
+            k = k.shiftRight(1);
+            BigInteger temp1 = aBase.multiply(aBase).add(bBase.multiply(bBase)).mod(mod);
+            BigInteger temp2 = aBase.multiply(bBase).add(bBase.multiply(cBase)).mod(mod);
+            BigInteger temp3 = bBase.multiply(bBase).add(cBase.multiply(cBase)).mod(mod);
+            aBase = temp1;
+            bBase = temp2;
+            cBase = temp3;
+        }
+        return aRes.mod(mod);
+    }
+
 }
