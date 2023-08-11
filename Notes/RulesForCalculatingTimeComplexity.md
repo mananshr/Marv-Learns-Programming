@@ -75,10 +75,10 @@ class DivideByTwo {
 ```java
 get_all_subsets(List<Integer> v,List<HashSet<Integer>>sets)
 {
-    int subsets_count=(int)(Math.pow(2,v.size()));
+    int subsets_count=(int)(Math.pow(2,v.size())); // notice power of 2 here
     for(int i=0;i<subsets_count; ++i){
         HashSet<Integer> set=new HashSet<Integer>();
-        for(int j=0;j<v.size();++j){
+        for(int j=0;j<v.size();++j){ // inner loop
             if(get_bit(i,j)==1){
                 int x=v.get(j);
                 set.add(x);
@@ -92,5 +92,63 @@ get_all_subsets(List<Integer> v,List<HashSet<Integer>>sets)
 **Time Complexity:** As can be seen , the outer loop runs O(2^n) times, and the inner loop runs O(n) times.
 Therefore, the total time complexity is the multiplication of both i.e. O(2^n * n).
 
+#### Example 3: Let’s take the example of a fibonacci number. The following program finds the nth fibonacci number. What is its time complexity?
+
+In fibonacci series, next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. The first two numbers of fibonacci series are 0 and 1.
+
+```java
+int fib(int n)
+{
+    // Base Case
+    if (n <= 1)
+        return n;
+
+    // Recursive call
+    return fib(n - 1) + fib(n - 2);
+}
+```
+
+The derivation of the time complexity is slightly non trivial , so you can skip it if you want.
+
+The characteristic equation of the equation ( F(n) = F(n-1) + F(n-2) ) would be x^2 - x -1 =0
+
+Solving the above equation we would get 2 roots.
+
+x = ( 1 + 5 )/2 and x = ( 1 - 5 )/2
+
+As we know the solution of a linear recursive function is given as
+
+F(n) = (1n + 2n )
+
+Using the above fact
+
+F(n) = ( ( 1 + 5 )/2 ) ^n + ( ( 1 - 5 )/2 ) ^n
+
+T(n) = O ( ( ( 1 + 5 )/2 ) ^n) + O( ( ( 1 - 5 )/2 ) ^n)
+
+T(n) = O ( ( ( 1 + 5 )/2 ) ^n)
+
+T(n) = O ( 1.6180 ) ^n
+
+But is this the best time complexity we can achieve? No, of course not. We can simply use dynamic programming to memoize the above program and bring down the complexity to linear.
 
 
+```text
+                          fib(5)   
+                       /          \
+               fib(4)                fib(3)   
+             /        \              /       \ 
+         fib(3)      fib(2)         fib(2)   fib(1)
+        /    \       /    \        /      \
+  fib(2)   fib(1)  fib(1) fib(0) fib(1) fib(0)
+  /     \
+fib(1) fib(0)
+```
+
+![Fibonacci Dynamic programming](../Assets/nthfibonacciseriesdynamicprogramming.png)
+
+The time complexity of the above program would be linear i.e. O(n).
+
+As there are only ‘n’ distinct states.
+
+We can further reduce the time complexity to O(logn) by using ‘Matrix Exponentiation’.

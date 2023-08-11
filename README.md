@@ -1,11 +1,30 @@
 ![Learn Programming](./Assets/Learn%20PROGRAMING.png)
 # Learn programming
 
-> **Prerequisites**: Data structures and basic searching and sorting techniques. Some working knowledge of Mathematics (Functions and probability).  
+Idea is that you are already a ***coder***, this will help you to be a **programmer**. 
+
+> **Prerequisites**: Data structures and algorithms (basic searching and sorting techniques). Some exposure to Java programming language.  Some working knowledge of Mathematics (Functions and probability).  
 
 ## Content
 1. [Time Complexity](./Notes/TimeComplexity.md)
 2. [Asymptotic Notations](./Notes/AsymptoticNotations.md)
+3. [Rules for Calculating Time Complexity](./Notes/RulesForCalculatingTimeComplexity.md)
 
 ## Code
-[Selection Sort](Notes/Code/SelectionSort.md)
+
+### Fibonacci
+- Simple addition [Code](./src/main/java/io/github/drmanan/learn/fibonacci/FibonacciSimple.java)
+- Recursion [Code](./src/main/java/io/github/drmanan/learn/fibonacci/FibonacciRecursion.java)
+
+### Sets
+- Finding Subsets
+  - Simple Loop [Code](./src/main/java/io/github/drmanan/learn/sets/FindSubsetsLoop.java)
+  - Recursion [Code](./src/main/java/io/github/drmanan/learn/sets/FindSubsetsRecursion.java)
+  - BitMasking [Code](./src/main/java/io/github/drmanan/learn/sets/FindSubsetsBitMasking.java)
+  - Backtracking [Code](./src/main/java/io/github/drmanan/learn/sets/FindSubsetsBacktracking.java)
+
+### Sorting
+- [Selection Sort](Notes/Code/SelectionSort.md) [Code](./src/main/java/io/github/drmanan/learn/sort/SelectionSorting.java)
+- Heap Sort [Code](./src/main/java/io/github/drmanan/learn/sort/HeapSort.java)
+- Quick Sort [Code](./src/main/java/io/github/drmanan/learn/sort/QuickSorting.java)
+
