@@ -15,10 +15,14 @@ public class FibonacciMatrixExponentiation {
 
     public static void main(String[] args) {
 
-        // int n = 10;
+        int n = 15;
         // System.out.println(displayFib(fib(BigInteger.valueOf(n))));
 
-        print10NFib();
+        for (int i = 0; i < n; i++) {
+            System.out.println(displayFib(fib(BigInteger.valueOf(i))));
+        }
+
+        // print10NFib();
     }
 
     public static void print10NFib(){

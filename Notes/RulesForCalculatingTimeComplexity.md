@@ -151,4 +151,19 @@ The time complexity of the above program would be linear i.e. O(n).
 
 As there are only ‘n’ distinct states.
 
-We can further reduce the time complexity to O(logn) by using ‘Matrix Exponentiation’.
+We can further reduce the time complexity to O(logn) by using [‘Matrix Exponentiation’](../src/main/java/io/github/drmanan/learn/fibonacci/FibonacciMatrixExponentiation.java).
+
+#### Example 4: This is a very commonly asked question in the interview. What is the time complexity of the below program?
+
+```java
+int n = 5;
+for (int i = 1; i < n; i++) {
+    for (int j = i; j < n; j += i) {
+        System.out.println("hello");
+    }
+}
+```
+
+Even though the time complexity of the above algorithm appears to be O(n*n) , in reality it is actually O (nlogn). You can try to derive it by yourself.
+
+The same principle is used in many famous algorithms like sieve. 
