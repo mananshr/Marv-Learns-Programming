@@ -25,19 +25,19 @@ Eg: Calculate the running time of the following program.
 
 ```java
 for(int i=0;i<n;i++)
-        {
-        int a=5;
-        a++;
-        }
+{
+    int a=5;
+    a++;
+}
 
-        for(int i=0;i<n;i++)
-        {
-        for(int j=0;j<n;j++)
-        {
+for(int i=0;i<n;i++)
+{
+    for(int j=0;j<n;j++)
+    {
         int b=5;
         b++;
-        }
-        }
+    }
+}
 ```
 
 First of all we can break the program into 2 fragments. The first fragment is the first loop and the second fragment is
