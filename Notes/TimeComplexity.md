@@ -1,16 +1,22 @@
-# Understanding Time Complexity of Computer Programs
+# Understanding The Time Complexity of Computer Programs
 
 ## What is Time Complexity and Why is it Vital?
 
-Imagine a scenario where your friend has selected a number between 1 and 1000 and challenged you to guess it. If your guess is right, they'll confirm it; otherwise, if your guess is too large, they'll say it's 'too big,' and if it's too small, they'll say it's 'too small.' Let's explore a couple of strategies to find the number:
+Imagine a scenario where your friend has selected a number between 1 and 1000 and has challenged you to guess it. 
+If your guess is right, they'll confirm it; otherwise, if your guess is too large, they'll say it's 'too big,'
+and if it's too small, they'll say it's 'too small.'
+Let's explore a couple of strategies to find the number:
 
 ### Example
 
 The brute force approach: Guess each number from 1 to 1000 and see if it's correct.
-The smarter approach: Start with the middle number. If it's 'too big,' focus on the left side; if it's 'too small,' focus on the right side. Repeat until you get the correct number.
+The smarter approach: Start with the middle number. 
+If it's 'too big,' focus on the left side; 
+if it's 'too small,' focus on the right side. 
+Repeat until you get the correct number.
 Which strategy seems better to you? As you might have deduced, the second strategy is much more efficient than the first. In the worst case, the first strategy could take up to 1000 guesses (if the number is 1000), while the second strategy would only need around 10 guesses in the worst case (thanks to halving the possibilities with each guess).
 
-> In the context of computer programs, the time complexity of the first strategy is denoted as O(n), while the second strategy has a time complexity of O(logn).
+> In the context of computer programs, the time complexity of the first strategy is denoted as Ο(n), while the second strategy has a time complexity of Ο(logn).
 
 As demonstrated by the example, various approaches can exist for solving the same problem. This applies to computer programming as well. Each approach (algorithm) may consume different amounts of time, space, and computational power. Thus, a method is needed to distinguish between these approaches and select the most efficient one.
 
@@ -35,7 +41,7 @@ However, to simplify matters, let's focus on a scenario where we treat the input
 - Single processor
 - 32-bit architecture
 - Sequential execution
-- Each arithmetic and logical operation takes 1 unit of time
+- Each arithmetic and logical operation takes *1* unit of time
 
 In this controlled context, we can better understand and estimate the execution time of an algorithm.
 
@@ -43,9 +49,9 @@ Let’s define a function T(n) as the runtime of a program as a function of the 
 
 Here are some operations for which T(n)=1
 
-- Assignment operator/ return statement  (Eg: int a=10).
-- Arithmetic operations (Eg: + , - , * , / ).
-- Logical operations ( Eg: & , | , ^).
+- Assignment operator/ return statement (Eg: int a=10).
+- Arithmetic operations (E.g.: +, —, *, /).
+- Logical operations (E.g.: &, |, ^).
 
 Example:
 
@@ -63,7 +69,10 @@ Is it possible to find the running time of the above algorithm without knowing t
 
 We can only measure the best and the worst running time of the above algorithm.
 
-In the best case, the running time of the above algorithm would be constant ( the first element of the array itself is 1), whereas in the worst case the running time of the above algorithm would be linear ( there is no 1 in the array ).
+In the best case, the running time of the above algorithm would be constant 
+(the first element of the array itself is 1), 
+whereas in the worst case, the running time of the above algorithm would be linear 
+(there is no 1 in the array).
 
-Now To define complexity, We use Asymptotic notations which we cover next.  
+Now, To define complexity, We use Asymptotic notations, which we cover next.  
 

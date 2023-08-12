@@ -30,7 +30,7 @@ return all i such that A[i] is true.
 
 To find all the prime numbers less than or equal to a given integer n by Eratosthenes' method:
 
-1. Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).
+1. Create a list of consecutive integers from *2* through n: (2, 3, 4, ..., n).
 2. Initially, let p equal 2, the smallest prime number.
 3. Enumerate the multiples of p by counting in increments of p from 2p to n, and mark them in the list (these will be
    2p, 3p, 4p, ...; the p itself should not be marked).
@@ -39,7 +39,8 @@ To find all the prime numbers less than or equal to a given integer n by Eratost
 5. When the algorithm terminates, the numbers remaining not marked in the list are all the primes below n.
 
 The main idea here is that every value given to p will be prime, because if it were composite it would be marked as a
-multiple of some other, smaller prime. Note that some of the numbers may be marked more than once (e.g., 15 will be
+multiple of some other, smaller prime.
+Note that some numbers may be marked more than once (e.g., 15 will be
 marked both for 3 and 5).
 
 As a refinement, it is sufficient to mark the numbers in step 3 starting from p2, as all the smaller multiples of p will
@@ -52,23 +53,23 @@ factorization, forming the initial list only from numbers coprime with the first
 i.e., numbers coprime with 2), and counting in the correspondingly adjusted increments so that only such multiples of p
 are generated that are coprime with those small primes, in the first place.
 
-#### Explanation with Example:
+#### Explanation, for Example:
 
 Let us take an example when n = 50. So we need to print all prime numbers smaller than or equal to 50.
 
 We create a list of all numbers from 2 to 50.
 
-![SieveofEratosthenes 1](../../Assets/SieveofEratosthenes1.jpg)
-According to the algorithm we will mark all the numbers which are divisible by 2 and are greater than or equal to the
+![Sieve of Eratosthenes 1](../../Assets/SieveofEratosthenes1.jpg)
+According to the algorithm, we will mark all the numbers which are divisible by *2* and are greater than or equal to the
 square of it.
-![SieveofEratosthenes 2](../../Assets/SieveofEratosthenes2.jpg)
-Now we move to our next unmarked number 3 and mark all the numbers which are multiples of 3 and are greater than or
+![Sieve of Eratosthenes 2](../../Assets/SieveofEratosthenes2.jpg)
+Now we move to our next unmarked number 3 and mark all the numbers which are multiples of *3* and are greater than or
 equal to the square of it.
-![SieveofEratosthenes 3](../../Assets/SieveofEratosthenes3.jpg)
-We move to our next unmarked number 5 and mark all multiples of 5 and are greater than or equal to the square of it.
-![SieveofEratosthenes 4](../../Assets/SieveofEratosthenes4.jpg)
-We continue this process and our final table will look like below:
-![SieveofEratosthenes 5](../../Assets/SieveofEratosthenes5.jpg)
+![Sieve of Eratosthenes 3](../../Assets/SieveofEratosthenes3.jpg)
+We move to our next unmarked number 5 and mark all multiples of *5* and are greater than or equal to the square of it.
+![Sieve of Eratosthenes 4](../../Assets/SieveofEratosthenes4.jpg)
+We continue this process, and our final table will look like below:
+![Sieve of Eratosthenes 5](../../Assets/SieveofEratosthenes5.jpg)
 So the prime numbers are the unmarked ones: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.
 
 Here is an animated example for algorithm steps for primes below 121 (including optimization of starting from prime's
