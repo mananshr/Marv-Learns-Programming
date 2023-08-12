@@ -56,7 +56,7 @@ Here are some operations for which T(n)=1
 Example:
 
 ```java
-boolean Find_One(arr[],int n)
+boolean Find_One(arr[], int n)
 {
    for (int i=0; i < n ; i++)
       if ( arr[i] == 1)
