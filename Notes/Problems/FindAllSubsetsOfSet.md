@@ -118,15 +118,17 @@ With the help of backtracking, we can generate all the subsets of the given arra
 
 The steps are as follows:
 
-Step 1: Create a 2D array list answer for keeping all the subsets.<br />
-Step 2: Also create a list tmp for keeping the current subset.<br />
-Step 3: Make a recursive method getSubset() that has the following four parameters:<br />
-Step 4: One is for keeping the current index. The second one is for storing the current subset. The third one is for storing all the generated subsets (2D list), and the fourth one is the input array.<br />
-Step 5: Invoke the method with the current index as 0, empty current vector (initially, there will be no subset), the empty 2D list, and the input integer array.<br />
-Step 6: In the getSubset() method, we include the ith element in to the list tmp and recursively invoke getSubset() with value i + 1.<br />
-Step 7: When the method call is returned, we delete the ith element from the tmp list and then invoke getSubset() method again with i + 1.<br />
-Step 8: If the value of i is the same as the size of the input array, then add the list tmp to the list answer.<br />
-Step 9: Eventually, sort and display each of the sub arrays that are there in the list answer.<br />
+**Step 1**: Create a 2D array list answer for keeping all the subsets.<br />
+**Step 2**: Also create a list tmp for keeping the current subset.<br />
+**Step 3**: Make a recursive method getSubset() that has the following four parameters:<br />
+**Step 4**: One is for keeping the current index.
+The second one is for storing the current subset. 
+The third one is for storing all the generated subsets (2D list), and the fourth one is the input array.<br />
+**Step 5**: Invoke the method with the current index as 0, empty current vector (initially, there will be no subset), the empty 2D list, and the input integer array.<br />
+**Step 6**: In the getSubset() method, we include the ith element in to the list tmp and recursively invoke getSubset() with value i + 1.<br />
+**Step 7**: When the method call is returned, we delete the ith element from the tmp list and then invoke getSubset() method again with i + 1.<br />
+**Step 8**: If the value of i is the same as the size of the input array, then add the list tmp to the list answer.<br />
+**Step 9**: Eventually, sort and display each of the sub arrays that are there in the list answer.<br />
 
 Now let's see the implementation of the steps mentioned above. [Full code here.](../../src/main/java/io/github/drmanan/learn/sets/FindSubsetsBacktracking.java)
 
