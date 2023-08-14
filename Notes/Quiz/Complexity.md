@@ -1,6 +1,6 @@
 # Quiz on Time and space complexity
 
-### What is the time complexity of the following code :
+### What is the time complexity of the following code:
 ```java
 int j = 0;
 for(i = 0; i < n; ++i) {
@@ -17,7 +17,7 @@ for(i = 0; i < n; ++i) {
 - [ ] O((n^2)*(log(n)))
 - [ ] Can't say. Depends on the value of arr.
 
-### What is the time, space complexity of the following code :
+### What is the time, space complexity of the following code:
 ```java
 int a = 0, b = 0;    
 for (i = 0; i < N; i++) {
@@ -35,7 +35,7 @@ for (j = 0; j < M; j++) {
 - [ ] O(N * M) time, O(N + M) space
 - [ ] O(N * M) time, O(N * M) space
 
-### What is the time, space complexity of the following code :
+### What is the time, space complexity of the following code:
 
 ```java
 int a = 0, b = 0;
@@ -56,7 +56,7 @@ for (k = 0; k < N; k++) {
 - [ ] O(N * N * N) time, O(1) space
 - [ ] O(N * N) time, O(N) space
 
-### What is the time complexity of the following code :
+### What is the time complexity of the following code:
 
 ```java
 int a = 0;
