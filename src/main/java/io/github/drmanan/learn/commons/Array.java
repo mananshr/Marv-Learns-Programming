@@ -18,14 +18,14 @@ public class Array {
 
     public static void print_array(char c, int[] arr) {
         switch (c) {
-            case 'b' -> System.out.println("\nBefore");
-            case 'a' -> System.out.println("\nAfter");
+            case 'b' -> System.out.print("\nBefore:\t");
+            case 'a' -> System.out.print("\nAfter:\t");
         }
         print_array(arr);
     }
 
     public static void print_array(int step, int[] arr) {
-        System.out.print("\nStep " + (step + 1) + ":\tArray: \t");
+        System.out.print("\nStep " + (step + 1) + "\t:\tArray:\t");
         print_array(arr);
     }
 
