@@ -59,17 +59,17 @@ Let us take an example when n = 50. So we need to print all prime numbers smalle
 
 We create a list of all numbers from 2 to 50.
 
-![Sieve of Eratosthenes 1](../../Assets/SieveofEratosthenes1.jpg)
+![Sieve of Eratosthenes 1](../../Assets/SieveofEratosthenes/1.jpg)
 According to the algorithm, we will mark all the numbers which are divisible by *2* and are greater than or equal to the
 square of it.
-![Sieve of Eratosthenes 2](../../Assets/SieveofEratosthenes2.jpg)
+![Sieve of Eratosthenes 2](../../Assets/SieveofEratosthenes/2.jpg)
 Now we move to our next unmarked number 3 and mark all the numbers which are multiples of *3* and are greater than or
 equal to the square of it.
-![Sieve of Eratosthenes 3](../../Assets/SieveofEratosthenes3.jpg)
+![Sieve of Eratosthenes 3](../../Assets/SieveofEratosthenes/3.jpg)
 We move to our next unmarked number 5 and mark all multiples of *5* and are greater than or equal to the square of it.
-![Sieve of Eratosthenes 4](../../Assets/SieveofEratosthenes4.jpg)
+![Sieve of Eratosthenes 4](../../Assets/SieveofEratosthenes/4.jpg)
 We continue this process, and our final table will look like below:
-![Sieve of Eratosthenes 5](../../Assets/SieveofEratosthenes5.jpg)
+![Sieve of Eratosthenes 5](../../Assets/SieveofEratosthenes/5.jpg)
 So the prime numbers are the unmarked ones: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.
 
 Here is an animated example for algorithm steps for primes below 121 (including optimization of starting from prime's

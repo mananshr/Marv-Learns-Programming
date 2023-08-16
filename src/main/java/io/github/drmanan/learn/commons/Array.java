@@ -18,10 +18,22 @@ public class Array {
 
     public static void print_array(char c, int[] arr) {
         switch (c) {
-            case 'b' -> System.out.print("\nBefore:\t");
-            case 'a' -> System.out.print("\nAfter:\t");
+            case 'b' -> System.out.print("\nBefore\t:\tArray:\t");
+            case 'a' -> System.out.print("\nAfter\t:\tArray:\t");
         }
         print_array(arr);
+    }
+    public static void print_array(POS position, int[] arr) {
+        switch (position) {
+            case BEFORE -> System.out.print("\nBefore\t:\tArray:\t");
+            case AFTER -> System.out.print("\nAfter\t:\tArray:\t");
+        }
+        print_array(arr);
+    }
+
+    public enum POS {
+        BEFORE,
+        AFTER
     }
 
     public static void print_array(int step, int[] arr) {

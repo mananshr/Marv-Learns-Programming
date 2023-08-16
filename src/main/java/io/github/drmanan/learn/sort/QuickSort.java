@@ -11,8 +11,8 @@ package io.github.drmanan.learn.sort;
 import static io.github.drmanan.learn.commons.Array.generate_random_array;
 import static io.github.drmanan.learn.commons.Array.print_array;
 
-public class QuickSorting {
-    static void QuickSort(int[] arr, int low, int high) {
+public class QuickSort {
+    static void Sort(int[] arr, int low, int high) {
         if (low > high) return;
         int mid = low + (high - low) / 2;
         int pivot = arr[mid];
@@ -28,17 +28,16 @@ public class QuickSorting {
                 i++;
                 j--;
             }
-
         }
-        if (low < j) QuickSort(arr, low, j);
-        if (high > i) QuickSort(arr, i, high);
-    }
 
+        if (low < j) Sort(arr, low, j);
+        if (high > i) Sort(arr, i, high);
+    }
 
     public static void main(String[] args) {
         int[] arr = generate_random_array(5, 10);
         print_array('b', arr);
-        QuickSort(arr, 0, arr.length - 1);
+        Sort(arr, 0, arr.length - 1);
         print_array('a', arr);
     }
 }

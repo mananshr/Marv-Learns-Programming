@@ -11,7 +11,7 @@ package io.github.drmanan.learn.sort;
 import static io.github.drmanan.learn.commons.Array.generate_random_array;
 import static io.github.drmanan.learn.commons.Array.print_array;
 
-public class SelectionSorting {
+public class SelectionSort {
     static void SelectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
