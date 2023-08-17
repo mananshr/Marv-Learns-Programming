@@ -68,3 +68,43 @@ We will swap **A[6]** and **A[7]** then, make **A[6]** part of sorted subarray.
 ![Initial Array](../../Assets/selection_sort/SelectionSort9.png)
 
 This is the final sorted array.
+
+### Pseudocode
+
+#### Find index of the minimum value
+
+Suppose, there are ‘n’ elements in the array. 
+Therefore, at the worst case, 
+there can be n iterations in FindMinIndex() 
+for start = 1 and end = n. 
+We did not take any auxiliary space.
+
+```postgresql
+FindMinIndex(Arr[], start, end)    
+        min_index = start    
+        
+        FOR i from (start + 1) to end:    
+            IF Arr[i] < Arr[min_index]:    
+                min_index = i    
+            END of IF    
+        END of FOR    
+              
+  Return min_index
+```
+
+> Time complexity: O(n)
+> 
+> Space complexity: O(1)
+ 
+#### Selection Sort
+
+Suppose, there are ‘n’ elements in the array. Therefore, at the worst case, 
+there can be n iterations in FindMinIndex() for start = 1 and end = n. 
+No auxiliary space used.
+
+**Total iterations = (n – 1) + (n – 2) + . . . + 1 = (n * (n – 1)) / 2 = (n2 – n) / 2**
+
+> Time complexity: O(n^2)
+>
+> Space complexity: O(1)
+ 

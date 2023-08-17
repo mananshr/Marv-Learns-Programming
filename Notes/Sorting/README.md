@@ -8,11 +8,11 @@ The most common example we experience every day is sorting clothes or other item
 
 ### Some examples of Sorting Algorithms:
 
-- Insertion Sort — [Code](../../src/main/java/io/github/drmanan/learn/sort/InsertionSort.java)
+- [Insertion Sort](./InsertionSort.md) — [Code](../../src/main/java/io/github/drmanan/learn/sort/InsertionSort.java)
 
   ![Insertion Sort Example](../../Assets/Insertion-sort-example-300px.gif)
 
-- Selection Sort — [Code](../../src/main/java/io/github/drmanan/learn/sort/SelectionSorting.java)
+- [Selection Sort](./SelectionSort.md) — [Code](../../src/main/java/io/github/drmanan/learn/sort/SelectionSorting.java)
 
   ![Selection Sort Example](../../Assets/Selection-Sort-Animation.gif)
 
