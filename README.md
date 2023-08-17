@@ -49,8 +49,8 @@ The idea is that you are already a ***coder***, this will help you to be a **pro
 
 ### Sorting
 
-- Insertion Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/InsertionSort.java)
-- Selection Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/SelectionSort.java)
+- Insertion Sort — [Code in Java](./src/main/java/io/github/drmanan/learn/sort/InsertionSort.java) — [Code in Python](./src/main/python/sort/InsertionSort.py)
+- Selection Sort — [Code in Java](./src/main/java/io/github/drmanan/learn/sort/SelectionSort.java) — [Code in Python](./src/main/python/sort/SelectionSort.py)
 - Heap Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/HeapSort.java)
 - Quick Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/QuickSorting.java)
 - Merge Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/MergeSort.java)
