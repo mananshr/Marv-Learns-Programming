@@ -13,6 +13,9 @@ The idea is that you are already a ***coder***, this will help you to be a **pro
 2. [Asymptotic Notations](./Notes/AsymptoticNotations.md)
 3. [Rules for Calculating Time Complexity](./Notes/RulesForCalculatingTimeComplexity.md)
 4. [Space Complexity](./Notes/SpaceComplexity.md)
+5. [Sorting](./Notes/Sorting/)
+   1. [Insertion Sort](./Notes/Sorting/InsertionSort.md)
+   2. [Selection Sort](./Notes/Sorting/SelectionSort.md)
 
 ### Quizzes
 
@@ -23,7 +26,7 @@ The idea is that you are already a ***coder***, this will help you to be a **pro
 1. [Find all subsets of a given set](./Notes/Problems/FindAllSubsetsOfSet.md)
 2. [Sieve of Eratosthenes](./Notes/Problems/SieveOfEratosthenes.md)
 
-## Code
+## Reference Code
 
 ### Fibonacci
 
@@ -46,7 +49,8 @@ The idea is that you are already a ***coder***, this will help you to be a **pro
 
 ### Sorting
 
-- [Selection Sort](Notes/Code/SelectionSort.md) — [Code](./src/main/java/io/github/drmanan/learn/sort/SelectionSorting.java)
+- Insertion Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/InsertionSort.java)
+- Selection Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/SelectionSort.java)
 - Heap Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/HeapSort.java)
 - Quick Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/QuickSorting.java)
 - Merge Sort — [Code](./src/main/java/io/github/drmanan/learn/sort/MergeSort.java)
