@@ -12,7 +12,7 @@ import static io.github.drmanan.learn.commons.Array.generate_random_array;
 import static io.github.drmanan.learn.commons.Array.print_array;
 
 public class SelectionSort {
-    static void SelectionSort(int[] arr) {
+    static void Sort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -23,17 +23,17 @@ public class SelectionSort {
                 arr[index] = arr[i];
                 arr[i] = temp;
             }
-            print_array(i, arr);
+            print_array(i, arr, index, i);
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = generate_random_array(10, 100);
+        int[] arr = generate_random_array(20, 100);
         // {8, 2, 6, 5, 4, 7, 8, 2, 9, 3, 1, 6}
         // {41, 53, 36, 19, 62, 85, 21}
         // {9, 8, 7, 6, 5, 4, 3, 2, 1}
         print_array('b', arr);
-        SelectionSort(arr);
+        Sort(arr);
         print_array('a', arr);
     }
 }
