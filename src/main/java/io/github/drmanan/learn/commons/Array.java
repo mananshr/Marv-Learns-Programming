@@ -26,7 +26,7 @@ public class Array {
         print_array(arr);
     }
 
-    public static void print_array(POS position, int[] arr) {
+    public static void print_array(POSITION position, int[] arr) {
         switch (position) {
             case BEFORE -> System.out.print("\nBefore\t:\tArray:\t");
             case AFTER -> System.out.print("\nAfter\t:\tArray:\t");
@@ -52,18 +52,38 @@ public class Array {
     }
 
     public static void print_array(int step, int[] arr, int highlight_index_1, int highlight_index_2) {
+        System.out.print(ConsoleColours.RESET);
         System.out.print("\nStep " + (step + 1) + "\t:\tArray:\t");
         for (int i = 0; i < arr.length; i++) {
+            System.out.print(ConsoleColours.BLACK);
             if (i == highlight_index_1) {
                 System.out.print(ConsoleColours.RED_UNDERLINED + arr[i] + ConsoleColours.RED_UNDERLINED);
-                System.out.print(ConsoleColours.RESET + "\t");
             } else if (i == highlight_index_2) {
                 System.out.print(ConsoleColours.GREEN_UNDERLINED + arr[i] + ConsoleColours.GREEN_UNDERLINED);
-                System.out.print(ConsoleColours.RESET + "\t");
-
             } else {
-                System.out.print(arr[i] + "\t");
+                System.out.print(arr[i]);
             }
+            System.out.print(ConsoleColours.RESET+ "\t");
+        }
+    }
+
+    public static void print_array(int step, int[] arr, int highlight_index_1, int highlight_index_2, BACKGROUND background) {
+        System.out.print("\nStep " + (step + 1) + "\t:\tArray:\t");
+        for (int i = 0; i < arr.length; i++) {
+            switch (background) {
+                case CYAN -> System.out.print(ConsoleColours.CYAN_BACKGROUND);
+                case YELLOW -> System.out.print(ConsoleColours.YELLOW_BACKGROUND);
+            }
+            System.out.print(ConsoleColours.BLACK);
+            if (i == highlight_index_1) {
+                System.out.print(ConsoleColours.RED_UNDERLINED + arr[i] + ConsoleColours.RED_UNDERLINED);
+            } else if (i == highlight_index_2) {
+                System.out.print(ConsoleColours.GREEN_UNDERLINED + arr[i] + ConsoleColours.GREEN_UNDERLINED);
+            } else {
+                System.out.print(arr[i]);
+            }
+            System.out.print(ConsoleColours.RESET + "\t");
+
         }
     }
 
@@ -71,8 +91,12 @@ public class Array {
         return IntStream.generate(() -> new Random().nextInt(max)).limit(n).toArray();
     }
 
-    public enum POS {
+    public enum POSITION {
         BEFORE, AFTER
+    }
+
+    public enum BACKGROUND {
+        CYAN, YELLOW
     }
 
 }

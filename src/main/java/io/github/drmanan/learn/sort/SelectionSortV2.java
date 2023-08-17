@@ -8,8 +8,8 @@
 
 package io.github.drmanan.learn.sort;
 
-import static io.github.drmanan.learn.commons.Array.POS.AFTER;
-import static io.github.drmanan.learn.commons.Array.POS.BEFORE;
+import static io.github.drmanan.learn.commons.Array.POSITION.AFTER;
+import static io.github.drmanan.learn.commons.Array.POSITION.BEFORE;
 import static io.github.drmanan.learn.commons.Array.generate_random_array;
 import static io.github.drmanan.learn.commons.Array.print_array;
 
